@@ -60,7 +60,8 @@ const ProfilePicture = ({ userImage, onDelete, onUpload }: Props) => {
                             classNameUploader="uc-dark uc-purple"
                             pubkey="ccd4cb82f9778954e964"
                             onFileUploadSuccess={handleUploadSuccess}
-                            x={X} />
+                            x
+                        />
                     </div>
                     // <UploadCareButton onUpload={onUpload} />
                 )}
