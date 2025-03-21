@@ -7,7 +7,7 @@ import Image from "next/image"
 import { useRouter } from "next/navigation"
 // import UploadCareButton from "./uploadcare-button"
 import '@uploadcare/react-uploader/core.css'
-import { FileUploaderRegular } from '@uploadcare/react-uploader/next'
+import { FileUploaderMinimal, FileUploaderRegular } from '@uploadcare/react-uploader/next'
 
 type Props = {
     userImage: string | null
@@ -55,12 +55,11 @@ const ProfilePicture = ({ userImage, onDelete, onUpload }: Props) => {
                     </>
                 ) : (
                     <div>
-                        <FileUploaderRegular
+                        <FileUploaderMinimal
                             sourceList="local, url, camera, dropbox"
                             classNameUploader="uc-dark uc-purple"
                             pubkey="ccd4cb82f9778954e964"
                             onFileUploadSuccess={handleUploadSuccess}
-                            x
                         />
                     </div>
                     // <UploadCareButton onUpload={onUpload} />
