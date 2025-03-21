@@ -56,7 +56,6 @@ const RenderConnectionAccordion = ({
                                     <div className="mb-4 ml-1">
                                         Select the slack channels to send notification and messages:
                                     </div>
-                                    <div>{JSON.stringify(selectedSlackChannels)}</div>
                                     <MultipleSelector
                                         value={selectedSlackChannels}
                                         onChange={setSelectedSlackChannels}
