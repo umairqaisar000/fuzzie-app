@@ -1,3 +1,5 @@
+'use client'
+
 import { db } from '@/lib/db'
 import { auth, clerkClient } from '@clerk/nextjs/server'
 import { google } from 'googleapis'
