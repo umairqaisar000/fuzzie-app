@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 
 import { useBilling } from '@/providers/billing-provider'
@@ -6,9 +7,8 @@ import { useEffect, useState } from 'react'
 import CreditTracker from './credits-tracker'
 import { SubscriptionCard } from './subscription-card'
 
-type Props = {}
 
-const BillingDashboard = (props: Props) => {
+const BillingDashboard = () => {
     const { credits, tier } = useBilling()
     const [stripeProducts, setStripeProducts] = useState<any>([])
     const [loading, setLoading] = useState<boolean>(false)
