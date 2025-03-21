@@ -58,8 +58,7 @@ export const onCreateNodeTemplate = async (
         }
     }
     if (type === 'Slack') {
-        console.log('channels ===============', channels)
-        const response = await db.workflows.update({
+        await db.workflows.update({
             where: {
                 id: workflowId,
             },
@@ -70,7 +69,6 @@ export const onCreateNodeTemplate = async (
         })
 
         if (type === "Slack") {
-            console.log("channels ===============", channels);
 
             // Update the Slack template and access token
             const response = await db.workflows.update({

@@ -4,9 +4,7 @@ import { onGetWorkflows } from '../_actions/workflow-connections'
 import MoreCredits from './more-credits'
 import Workflow from './workflow'
 
-type Props = {}
-
-const Workflows = async (props: Props) => {
+const Workflows = async () => {
     const workflows = await onGetWorkflows()
     return (
         <div className="relative flex flex-col gap-4">

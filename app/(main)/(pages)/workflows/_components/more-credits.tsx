@@ -3,9 +3,7 @@
 import { Card, CardContent, CardDescription } from '@/components/ui/card'
 import { useBilling } from '@/providers/billing-provider'
 
-type Props = {}
-
-const MoreCredits = (props: Props) => {
+const MoreCredits = () => {
   const { credits } = useBilling()
   return credits !== '0' ? (
     <></>

@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 import {
     ResizableHandle,
@@ -32,13 +34,11 @@ import EditorCanvasSidebar from './editor-canvas-sidebar'
 import FlowInstance from './flow-instance'
 import { onGetNodesEdges } from '../../../_actions/workflow-connections'
 
-type Props = {}
-
 const initialNodes: EditorNodeType[] = []
 
 const initialEdges: { id: string; source: string; target: string }[] = []
 
-const EditorCanvas = (props: Props) => {
+const EditorCanvas = () => {
     const { dispatch, state } = useEditor()
     const [nodes, setNodes] = useState(initialNodes)
     const [edges, setEdges] = useState(initialEdges)

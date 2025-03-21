@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ConnectionProviderProps } from '@/providers/connections-provider'
 import { z } from 'zod'
 

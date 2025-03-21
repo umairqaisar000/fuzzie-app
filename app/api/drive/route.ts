@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { auth, clerkClient } from '@clerk/nextjs/server'
 import { google } from 'googleapis'
 import { NextResponse } from 'next/server'

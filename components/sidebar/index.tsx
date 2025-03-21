@@ -13,10 +13,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { ModeToggle } from '../globals/mode-toggle'
 
-
-type Props = {}
-
-const MenuOptions = (props: Props) => {
+const MenuOptions = () => {
     const pathName = usePathname()
 
     return (

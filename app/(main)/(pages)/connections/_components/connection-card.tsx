@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ConnectionTypes } from '@/lib/types'
 
 import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'

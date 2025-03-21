@@ -3,20 +3,18 @@
 import { Input } from '@/components/ui/input'
 import { Book, Headphones, Search } from 'lucide-react'
 
+import { onPaymentDetails } from '@/app/(main)/(pages)/billing/_actions/payment-connections'
 import {
     Tooltip,
     TooltipContent,
     TooltipProvider,
     TooltipTrigger,
 } from '@/components/ui/tooltip'
+import { useBilling } from '@/providers/billing-provider'
 import { UserButton } from '@clerk/nextjs'
 import { useEffect } from 'react'
-import { useBilling } from '@/providers/billing-provider'
-import { onPaymentDetails } from '@/app/(main)/(pages)/billing/_actions/payment-connections'
 
-type Props = {}
-
-const InfoBar = (props: Props) => {
+const InfoBar = () => {
     const { credits, tier, setCredits, setTier } = useBilling()
 
     const onGetPayment = async () => {

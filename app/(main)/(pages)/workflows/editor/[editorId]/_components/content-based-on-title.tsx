@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { AccordionContent } from '@/components/ui/accordion'
 import {
     Card,
@@ -29,9 +31,6 @@ export interface Option {
     fixed?: boolean
     /** Group the options by providing key. */
     [key: string]: string | boolean | undefined
-}
-interface GroupOption {
-    [key: string]: Option[]
 }
 
 type Props = {
@@ -71,8 +70,8 @@ const ContentBasedOnTitle = ({
         reqGoogle()
     }, [])
 
-    // @ts-ignore
-    const nodeConnectionType: any = nodeConnection[nodeMapper[title]]
+    // @ts-expect-error
+    const nodeConnectionType = nodeConnection[nodeMapper[title]]
     if (!nodeConnectionType) return <p>Not connected</p>
 
     const isConnected =

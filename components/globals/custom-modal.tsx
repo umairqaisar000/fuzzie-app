@@ -6,7 +6,6 @@ import {
     DrawerFooter,
     DrawerHeader,
     DrawerTitle,
-    DrawerTrigger,
   } from '@/components/ui/drawer'
   
   import React from 'react'
@@ -20,7 +19,7 @@ import { useModal } from '@/providers/model-provider'
     defaultOpen?: boolean
   }
   
-  const CustomModal = ({ children, subheading, title, defaultOpen }: Props) => {
+  const CustomModal = ({ children, subheading, title }: Props) => {
     const { isOpen, setClose } = useModal()
     const handleClose = () => setClose()
   

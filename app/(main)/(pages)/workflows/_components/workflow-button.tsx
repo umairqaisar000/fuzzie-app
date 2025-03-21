@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client'
 import Workflowform from '@/components/forms/workflow-form'
 import CustomModal from '@/components/globals/custom-modal'
@@ -6,9 +7,7 @@ import { useBilling } from '@/providers/billing-provider'
 import { useModal } from '@/providers/model-provider'
 import { Plus } from 'lucide-react'
 
-type Props = {}
-
-const WorkflowButton = (props: Props) => {
+const WorkflowButton = () => {
     const { setOpen, setClose } = useModal()
     const { credits } = useBilling()
 

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 import * as LR from '@uploadcare/blocks'
 import { useRouter } from 'next/navigation'
