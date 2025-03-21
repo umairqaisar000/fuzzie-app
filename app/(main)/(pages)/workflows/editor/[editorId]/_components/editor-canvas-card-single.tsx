@@ -15,8 +15,6 @@ import {
 import clsx from 'clsx'
 import EditorCanvasIconHelper from './editor-canvas-card-icon-helper'
 
-type Props = {}
-
 const EditorCanvasCardSingle = ({ data }: { data: EditorCanvasCardType }) => {
   const { dispatch, state } = useEditor()
   const nodeId = useNodeId()

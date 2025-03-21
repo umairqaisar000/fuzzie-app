@@ -123,7 +123,7 @@ export const onConnections = async (
             })
 
             if (nodeConnection.notionNode.databaseId !== '') {
-                const response = await getNotionDatabase(
+                await getNotionDatabase(
                     nodeConnection.notionNode.databaseId,
                     nodeConnection.notionNode.accessToken
                 )
