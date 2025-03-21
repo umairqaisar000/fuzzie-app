@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 import { motion, useScroll, useTransform } from 'framer-motion'
+import Image from 'next/image'
 import React, { useRef } from 'react'
 
 export const ContainerScroll = ({
@@ -89,13 +90,18 @@ export const Card = ({
             }}
             className="max-w-5xl -mt-12 mx-auto h-[30rem] md:h-[40rem] w-full  p-6 bg-[#222222] rounded-[30px] shadow-2xl"
         >
-            <div className="bg-neutral-900 h-full w-full rounded-2xl  gap-4 overflow-hidden p-4 transition-all ">
-                {/* <Image
+            <div className="bg-neutral-900 h-full w-full rounded-2xl gap-4 overflow-hidden p-4 transition-all relative">
+                <Image
                     src="/temp-banner.png"
                     fill
                     alt="bannerImage"
                     className="object-cover border-8 rounded-2xl"
-                /> */}
+                    style={{
+                        position: 'absolute',
+                        transform: 'translateZ(0)' // Force hardware acceleration
+                    }}
+                    priority // Prioritize loading this image
+                />
             </div>
         </motion.div>
     )
