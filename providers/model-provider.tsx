@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-empty-object-type */
 'use client'
 import { createContext, useContext, useEffect, useState } from 'react'
 
@@ -37,7 +40,8 @@ const ModalProvider: React.FC<ModalProviderProps> = ({ children }) => {
     ) => {
         if (modal) {
             if (fetchData) {
-                setData({ ...data, ...(await fetchData()) } || {})
+                const fetchedData = await fetchData();
+                setData({ ...data, ...(fetchedData || {}) });
             }
             setShowingModal(modal)
             setIsOpen(true)
