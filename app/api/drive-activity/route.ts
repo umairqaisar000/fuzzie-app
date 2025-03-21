@@ -1,5 +1,3 @@
-'use client'
-
 import { db } from '@/lib/db'
 import { auth, clerkClient } from '@clerk/nextjs/server'
 import { google } from 'googleapis'
@@ -50,7 +48,7 @@ export async function GET() {
             id: channelId,
             type: 'web_hook',
             address:
-                `${process.env.NGROK_URI}/api/drive-activity/notification`,
+                `${process.env.NEXT_PUBLIC_URL}/api/drive-activity/notification`,
             kind: 'api#channel',
         },
     })

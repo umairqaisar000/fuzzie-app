@@ -1,5 +1,3 @@
-'use client'
-
 import { postContentToWebHook } from '@/app/(main)/(pages)/connections/_actions/discord-connection'
 import { onCreateNewPageInDatabase } from '@/app/(main)/(pages)/connections/_actions/notion-connection'
 import { postMessageToSlack } from '@/app/(main)/(pages)/connections/_actions/slack-connection'
@@ -85,7 +83,7 @@ export async function POST() {
                                 'https://api.cron-job.org/jobs',
                                 {
                                     job: {
-                                        url: `${process.env.NGROK_URI}?flow_id=${flow.id}`,
+                                        url: `${process.env.NEXT_PUBLIC_URL}?flow_id=${flow.id}`,
                                         enabled: 'true',
                                         schedule: {
                                             timezone: 'Europe/Istanbul',
